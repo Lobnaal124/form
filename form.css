@@ -1,0 +1,18 @@
+ p,label{
+    /* background: -webkit-linear-gradient(rgb(13, 85, 239), rgb(242, 242, 182));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    /* color: rgb(88, 129, 216);
+    font-family: cursive; */
+    background: linear-gradient(
+      to right, #f32170, #ff6b08,
+       #cf23cf, #eedd44);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  h1{
+    padding:20px;
+    text-align: center;
+    font-family: cursive;
+  }
+ 

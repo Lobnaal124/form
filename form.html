@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="form.css">
+    <link rel="font" href="fontawesome-free-6.1.2-web/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+      <link href="form.js" rel="javascript">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</head>
+<body>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+   <h1>Registration</h1>
+    <hr>
+        <form class="container"> 
+            <div class="grid text-center"> 
+                <!-- for the user name  -->
+            <label for="firstname" class="col-sm-2">First Name</label> 
+            <label for="lastname" class="col-sm-9">Last Name</label><br>
+            <input type="text" class="col-sm-5" name="firstname" placeholder="Enter your first name" autocomplete="on" required>
+            <input type="text" class="col-sm-5" name="lastname" autocomplete="on" placeholder="Enter your last name" required><br>
+             <!-- for e-mail and password  -->
+            <label for="email">Email</label><br>
+            <input type="email" id="email" class="col-sm-6" name="email" required autocomplete="on" placeholder="Enter your Email" required><br>
+            <label for="password" class="col-sm-2" required>Password</label>
+            <label for="confirm password" class="col-sm-9" required>Confirm Password</label><br>
+            <input type="password" id="password" class="col-sm-5" name="password" required placeholder="Enter your password "> 
+            <input type="password" id="confirm_password" class="col-sm-5" name="confirm_password" required placeholder="Confirm your password "><br>
+        </div><hr>
+        <!-- for Gender -->
+        <div2 id="div2">
+            <p>Gender</p>
+            <input type="radio" id="Rad1" name="Rad_Gender" value="Male">Male
+             <br>
+            <input type="radio" id="Rad2" name="Rad_Gender" value="Female">Female
+            <hr>
+            <!-- for hobbies -->
+            <p>Hobbies</p>
+            <input type="checkbox" id="music" name="music" value="Music">
+            <lable for="Music"> Music</lable><br>
+            <input type="checkbox" id="sports" name="sports" value="sports">
+            <lable for="sports"> Sports</lable><br>
+            <input type="checkbox" id="travel" name="travel" value="travel">
+            <lable for="travel"> Travel </lable><br>
+            <input type="checkbox" id="movies" name="movies" value="movies">
+            <lable for="movies">Movies</lable><br>
+           </div2><hr>
+             <!-- for age of experince  -->
+             <label>EXPERINCE</label>
+             <span id="slider_value2" style="color:rgb(214, 252, 138);font-weight:bold;"></span><br>
+                <input type="button" value="-" onClick="subtract_one()">
+                0 <input type="range" min="0" max="1000" step="1" name="sld6" value="477" onchange="show_value2(this.value)">5 Y 
+                <input type="button" value="+" onClick="add_one()">
+            </div3><hr>
+            <!-- uploading file -->
+            <div class="mb-3">
+                <label for="formFileMultiple" class="form-label">UPLOAD PHOTO</label>
+                <input class="form-control" type="file" id="formFileMultiple" multiple>
+              </div><hr>
+              <!-- for age -->
+               <div id="divv">
+                <label for="exampleDataList" class="form-label">AGE</label>
+                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Tap to Select...">
+                <datalist id="datalistOptions">
+                  <option value="19">
+                  <option value="20">
+                  <option value="21">
+                  <option value="22">
+                  <option value="23">
+                  <option value="24">
+                  <option value="25">  
+                </datalist>
+            </div><hr>
+            <!-- for bio -->
+             <p>Bio</p>
+            <textarea id="txtMsg" name="txtMsg" rows="8" cols="50"></textarea>
+           <br>
+            <!-- submition-->
+              <button class="btn btn-warning float-end rounded-3 " type="button" onclick="Submit()">DONE!</button>
+              <!--end of the form-->
+         </form>  
+    
+</body>
+</html>
